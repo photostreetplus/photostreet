@@ -1,26 +1,23 @@
 import React, { useState, useEffect } from 'react';
 import './Carousel.css';
-import image1 from '../images/first_images/8.jpg'
-import video1 from '../images/first_images/1.mp4'
-import image2 from '../images/first_images/9.jpg'
-import image3 from '../images/first_images/10.jpg'
 
 
 const mediaItems = [
-  { type: 'image', src: image1 },
-  { type: 'video', src: video1 },
-  { type: 'image', src: image2 },
-  { type: 'image', src: image3 },
+  { type: 'image', src: 'https://drive.google.com/thumbnail?id=16cV1yWrW_RskEPrhDoqFa1ZKuyuoeqbs&sz=w1000' },
+  // { type: 'video', src: 'https://drive.google.com/file/d/1j40yjM5cfxk4Md455uXl0e878-PRiFNO/preview' },
+  { type: 'image', src: 'https://drive.google.com/thumbnail?id=10IFPTQgv8C7oK5AKePFdePgyFiPD2Dst&sz=w1000' },
+  { type: 'image', src: 'https://drive.google.com/thumbnail?id=1ahDn6kaUfTEEiqI1qpcPfjA6NmDbEbLS&sz=w1000' },
 ];
 
 function Carousel() {
   const [currentIndex, setCurrentIndex] = useState(0);
 
+
   // Automatically change slides every 3 seconds
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentIndex(prevIndex => (prevIndex + 1) % mediaItems.length);
-    }, 7000); // Adjust time as needed
+    }, 300000); // Adjust time as needed
     return () => clearInterval(interval);
   }, []);
 
@@ -43,13 +40,21 @@ function Carousel() {
                 className="carousel-media-item"
               />
             ) : (
-              <video
+              // <video
+              //   src={item.src}
+              //   className="carousel-media-item video-item"
+              //   autoPlay={currentIndex === index}
+              //   muted
+              //   controls
+              // />
+              <iframe
                 src={item.src}
                 className="carousel-media-item video-item"
-                autoPlay={currentIndex === index}
+                allow="autoplay"
+                allowFullScreen
+                title="Google Drive Video"
                 muted
-                controls
-              />
+              ></iframe>
             )}
           </div>          
         ))}
