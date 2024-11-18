@@ -39,7 +39,7 @@
   display: flex;
   gap: 5px; /* Space between dots */
   bottom: 5%;
-  right: 5%;
+  right: 50%;
   z-index: 1; /* Ensures dots are above the media */
 }
 
