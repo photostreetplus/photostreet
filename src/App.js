@@ -1,9 +1,9 @@
 import logo from './logo.svg';
 import './App.css';
-import HomeHeader from './components/HomeHeader'
 import Carousel from './components/Carousel'
 import HelpWidget from './components/HelpWidget'
 import FixedImageWidget from './components/FixedImageWidget'
+import WhatsAppIcon from './components/WhatsAppIcon'
 
 function App() {
   return (
@@ -11,6 +11,7 @@ function App() {
       <FixedImageWidget/>
       <Carousel/>
       <HelpWidget/>
+      <WhatsAppIcon/>
     </div>
   );
 }
