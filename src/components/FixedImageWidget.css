@@ -1,0 +1,14 @@
+.fixed-image-widget {
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1000; /* Make sure it stays on top of other elements */
+    padding: 10px;
+  }
+  
+  .fixed-image-widget img {
+    max-width: 240px; /* Adjust the size of the image */
+    height: auto;
+  }
+  

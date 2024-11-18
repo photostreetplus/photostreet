@@ -1,0 +1,14 @@
+
+  .App-footer {
+    position: sticky;
+    top: 0;
+    z-index: 000;
+  }
+
+.App-footer {
+    background-color: #1c1e24;
+    color: rgb(155, 154, 154);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
