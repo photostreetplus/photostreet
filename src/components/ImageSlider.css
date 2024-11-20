@@ -5,7 +5,6 @@
     overflow: hidden;
     margin-top: 100px;
   }
-
   
   .slider {
     display: flex;
@@ -16,9 +15,9 @@
   }
   
   .slider-image {
-    width: 100vw; /* Ensures the image covers the full width of the viewport */
-    height: 100vh; /* Ensures the image covers the full height of the viewport */
-    object-fit: cover; /* Keeps the image aspect ratio and fills the screen */
+    width: 100%; /* Use full width */
+    height: 100%; /* Use full height */
+    object-fit: cover; /* Ensures the image covers the container while maintaining aspect ratio */
   }
   
   .left-arrow,
@@ -32,18 +31,32 @@
     padding: 10px;
     cursor: pointer;
     z-index: 1;
+    font-size: 24px; /* Adjust arrow size for better visibility */
   }
   
   .left-arrow {
-    left: 20px;
+    left: 10px; /* Smaller spacing for mobile compatibility */
   }
   
   .right-arrow {
-    right: 20px;
+    right: 10px;
   }
   
   .left-arrow:hover,
   .right-arrow:hover {
     background-color: rgba(0, 0, 0, 0.7);
+  }
+  
+  /* Media Query for Mobile Screens */
+  @media (max-width: 768px) {
+    .slider-container {
+      height: 30vh; /* Maintain full-screen height for mobile */
+    }
+  
+    .left-arrow,
+    .right-arrow {
+      padding: 8px; /* Smaller padding for smaller screens */
+      font-size: 20px; /* Adjust font size for smaller arrows */
+    }
   }
   
