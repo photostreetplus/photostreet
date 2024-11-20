@@ -63,7 +63,7 @@ const PhotographerCategories = () => {
 
   return (
     <div className="category-container">
-        <div className="thumbnail-grid">
+        {/* <div className="thumbnail-grid">
         {categories.map((category, index) => (
             <PhotographerThumbnail
             key={index}
@@ -72,7 +72,21 @@ const PhotographerCategories = () => {
             onClick={() => handleThumbnailClick(category.page)}
             />
         ))}
-        </div>
+        </div> */}
+        <div className="row">
+        {categories.map((category, index) => (
+          <div className="col-6 col-md-4 col-lg-3" key={index}>
+            {/* <div className="thumbnail"> */}
+            <PhotographerThumbnail
+            key={index}
+            title={category.title}
+            icon={category.icon}
+            onClick={() => handleThumbnailClick(category.page)}
+            />
+            {/* </div> */}
+          </div>
+        ))}
+      </div>
     </div>
   );
 };
