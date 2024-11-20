@@ -17,7 +17,7 @@ function Carousel() {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentIndex(prevIndex => (prevIndex + 1) % mediaItems.length);
-    }, 5000); // Adjust time as needed
+    }, 300000); // Adjust time as needed
     return () => clearInterval(interval);
   }, []);
 

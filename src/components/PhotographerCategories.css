@@ -1,0 +1,41 @@
+.category-container {
+    position: relative;
+    overflow: hidden;
+    /* display: flex; */
+    justify-content: center;
+    align-items: center;
+    margin-top: 60px;
+    margin-left: 150px;
+    margin-right: 150px;
+    margin-bottom: 60px;
+  }
+
+.thumbnail-grid {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  }
+  
+  .thumbnail {
+    border: 1px solid #cccccc;
+    border-radius: 8px;
+    padding: 16px;
+    text-align: center;
+    cursor: pointer;
+    transition: box-shadow 0.8s;
+  }
+  
+  .thumbnail:hover {
+    box-shadow: 0 6px 10px rgba(241, 6, 222, 0.2);
+  }
+  
+  .icon {
+    font-size: 24px;
+    margin-bottom: 8px;
+  }
+  
+  .title {
+    font-size: 14px;
+    font-weight: 500;
+  }
+  

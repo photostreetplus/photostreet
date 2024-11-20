@@ -27,7 +27,7 @@
 .carousel-media-item {
   max-width: 100%;
   max-height: 100%;
-  object-fit: contain; /* Keeps aspect ratio */
+  object-fit: cover; /* Keeps aspect ratio */
 }
 
 .video-item {
